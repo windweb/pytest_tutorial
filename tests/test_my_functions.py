@@ -1,9 +1,13 @@
 import pytest
 import source.my_functions as my_functions
 
+
+# Тесты на основе функций из source\my_functions.py:
 def test_add():
     result = my_functions.add(1, 4)
     assert result == 5
+#     assert - оператор, который проверяет,
+#     что результат выполнения функции равен ожидаемому значению.
 
 
 def test_add_strings():
