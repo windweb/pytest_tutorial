@@ -4,9 +4,9 @@
 
 ## Содержание
 
-- [ ] Введение / Introduction
-- [ ] Наши первые тесты / Our First Tests
-- [ ] Тестирование классов / Class-based Tests
+- [x] Введение / Introduction
+- [x] Наши первые тесты / Our First Tests
+- [x] Тестирование классов / Class-based Tests
 - [ ] Фикстуры / Fixtures
 - [ ] Маркировки и параметризация / Mark & Parametrize
 - [ ] Мокирование / Mocking
