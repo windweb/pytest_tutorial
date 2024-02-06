@@ -1,4 +1,5 @@
 import pytest
+
 import source.my_functions as my_functions
 
 
@@ -6,7 +7,10 @@ import source.my_functions as my_functions
 def test_add():
     result = my_functions.add(1, 4)
     assert result == 5
-#     assert - оператор, который проверяет,
+
+
+#     assert - оператор,
+#     который проверяет,
 #     что результат выполнения функции равен ожидаемому значению.
 
 
@@ -20,11 +24,6 @@ def test_divide():
     assert result == 2
 
 
-
 def test_divide_by_zero():
     with pytest.raises(ValueError):
         my_functions.divide(10, 0)
-
-
-
-
