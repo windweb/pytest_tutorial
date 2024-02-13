@@ -11,9 +11,18 @@ class Response:
     def validate(self, schema):
         if isinstance(self.response_json, list):
             for item in self.response_json:
-                validate(item, schema)
+                # validate(item, schema)  # используя jsonschema
+                # используя pydantic v1.x
+                # schema.parse_obj(item)
+                # используя pydantic v2.x+ https://docs.pydantic.dev/2.6/migration/#continue-using-pydantic-v1-features
+                schema.model_validate(item)
         else:
-            validate(self.response_json, schema)
+            # validate(self.response_json, schema)  # используя jsonschema
+            # используя pydantic v1.x
+            # schema.parse_obj(self.response_json)
+            # используя pydantic v2.x+
+            schema.model_validate(self.response_json)
+        return self
 
         # for item in received_posts:
         #     validate(item, POST_SCHEMA)
